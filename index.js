@@ -36,3 +36,12 @@ var server = app.listen(process.env.PORT || 8080, function() {
     var port = server.address().port;
     console.log("My Line bot App running on port", port);
 });
+
+// 主動發送訊息給 Client App
+setTimeout(function() {
+    var userId = config.clientAppUserID;
+    var sendMsg = "push msg to one user";
+    bot.push(userId, [sendMsg]);
+    console.log('userId: ' + userId);
+    console.log('send: ' + sendMsg);
+}, 3000);
