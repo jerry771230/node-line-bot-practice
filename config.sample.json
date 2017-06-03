@@ -1,0 +1,6 @@
+{
+    "channelId": "Channel ID",
+    "channelSecret": "Channel Secret",
+    "channelAccessToken": "Channel Access Token",
+    "clientAppUserID": "Client App User ID"
+}
