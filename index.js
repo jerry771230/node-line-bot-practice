@@ -12,7 +12,19 @@ var bot = linebot({
 
 bot.on('message', function(event) {
     // 把收到訊息的 event 印出來
-    console.log(event);
+    //console.log(event);
+
+    // 重複 client 輸入的內容
+    if (event.message.type = 'text') {
+        var msg = event.message.text;
+        event.reply(msg).then(function(data) {
+            // success
+            console.log(msg);
+        }).catch(function(error) {
+            // error
+            console.log('error');
+        });
+    }
 });
 
 const linebotParser = bot.parser(),
